@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BICOR</h1>
+  <div class="div">
+  selection votre poste: <select  id="selection" onchange="valider(this.value)">
+      <option value="CEO">CEO</option>
+      <option value="COO">COO</option>
+      <option value="DAFO">DAFO</option>
+  </select>  
+   <br> Entrer le nombre d'annee <input type="number" id="input" onkeyup="valider()">
+   <p id="para" onkeyup="valider()"></p>
+</div>
+   <script>
+        function valider(){
+            var input=document.getElementById('input').value
+            var selection=document.getElementById('selection').value
+            var salaire;
+            if(selection=='CEO'){
+                salaire=200;
+            }
+            else if(selection=='COO'){
+                salaire=200;
+            }
+            else if(selection=='DAFO'){
+                salaire
+            }
+            
+            var moyenne= parseInt(salaire*20)/100
+            
+            var mois=12
+            var annee=parseInt(mois*input)
+            var total=parseInt(moyenne*annee)
+            total=parseInt(total)
+            para.innerHTML=+total
+
+
+        }
+            
+   </script>
+</body>
+</html>
